@@ -27,6 +27,8 @@ async function runTest() {
         await cityEdit.addValue("gdynia");
         const checkButton = await driver.$("id:pl.training.runkeeper:id/check_button");
         await checkButton.click();
+        const city = await driver.$("id:pl.training.runkeeper:id/city_name_text");
+        await city.waitForDisplayed({timeout: 5000});
     } finally {
         await driver.pause(1000);
         await driver.deleteSession();
