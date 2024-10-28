@@ -13,16 +13,17 @@ import static pl.training.AndroidTestConfig.stopServer;
 
 class RunkeeperTest {
 
+    private final String CITY_NAME = "gdynia";
+
     private final AndroidTestConfig config = new AndroidTestConfig();
     private final ForecastPage page = new ForecastPage();
 
     @Test
     void test() throws InterruptedException {
-        var cityName = "gdynia";
-        page.cityEdit.sendKeys(cityName);
+        page.cityEdit.sendKeys(CITY_NAME);
         page.checkButton.click();
         new WebDriverWait(config.getDriver(), Duration.ofSeconds(5)).until(visibilityOf(page.city));
-        assertEquals(cityName, page.city.getText());
+        assertEquals(CITY_NAME, page.city.getText());
     }
 
     @BeforeAll
