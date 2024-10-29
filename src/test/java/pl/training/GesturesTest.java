@@ -12,6 +12,7 @@ import java.time.Duration;
 import java.util.Map;
 
 // https://github.com/appium/appium-uiautomator2-driver/blob/master/docs/android-mobile-gestures.md
+// https://monfared.medium.com/gestures-in-appium-part9-plugin-9f83b954a400
 public class GesturesTest {
 
     private final AndroidTestConfig config = new AndroidTestConfig();
@@ -61,6 +62,22 @@ public class GesturesTest {
                 "percent", 1.0
         );
         driver.executeScript("mobile: swipeGesture", params);
+    }
+
+    @Test
+    void drag() {
+        driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Drag & Drop\")")).click();
+
+        var element = driver.findElement(new ByAndroidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(4)"));
+        var dropZone = driver.findElement(new ByAndroidUIAutomator("new UiSelector().description(\"dropzone\")"));
+
+        var params = Map.of(
+                "elementId", element,
+                "endX", dropZone.getLocation().x + 50,
+                "endY", dropZone.getLocation().y + 50
+        );
+
+        driver.executeScript("mobile: dragGesture", params);
     }
 
     /*

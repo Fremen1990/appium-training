@@ -1,0 +1,39 @@
+{
+  "name": "ScrollUp",
+  "description": "Add Description",
+  "actions": [
+    {
+      "name": "pointer1",
+      "ticks": [
+        {
+          "id": "1.1",
+          "type": "pointerMove",
+          "x": 46.4,
+          "y": 89.5,
+          "duration": 0
+        },
+        {
+          "id": "1.2",
+          "type": "pointerDown",
+          "button": 0
+        },
+        {
+          "id": "1.3",
+          "type": "pointerMove",
+          "x": 50.7,
+          "y": 25.6,
+          "duration": 300
+        },
+        {
+          "id": "1.4",
+          "type": "pointerUp",
+          "button": 0
+        }
+      ],
+      "color": "#FF3333",
+      "id": "1"
+    }
+  ],
+  "id": "edbb30f9-d88b-4f62-9a90-c544bd9141e4",
+  "date": 1730201915726
+}
