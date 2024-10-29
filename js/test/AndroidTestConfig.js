@@ -13,12 +13,25 @@ class AndroidTestConfig {
 
     static startServer() {
         try {
-            execSync('appium', { stdio: 'ignore' });
+            execSync('appium', (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`error: ${error.message}`);
+                    return;
+                }
+
+                if (stderr) {
+                    console.error(`stderr: ${stderr}`);
+                    return;
+                }
+                console.log(`stdout:\n${stdout}`);
+            });
             console.log('Appium server started.');
         } catch (error) {
             console.error('Error starting Appium server:', error);
         }
     }
+
+
 
     static stopServer() {
         try {
@@ -32,8 +45,10 @@ class AndroidTestConfig {
     async initDriver() {
         try {
             const appiumUrl = process.env.APPIUM_URL || DEFAULT_APPIUM_URL;
+            const url = new URL(appiumUrl);
             this.driver = await remote({
-                hostname: new URL(appiumUrl).hostname,
+                hostname: url.hostname,
+                port: +url.port,
                 protocol: 'http',
                 capabilities: this.getOptions(),
             });

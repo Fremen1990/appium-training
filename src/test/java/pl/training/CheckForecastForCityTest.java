@@ -16,15 +16,15 @@ class CheckForecastForCityTest {
     private final String CITY_NAME = "gdynia";
 
     private final AndroidTestConfig config = new AndroidTestConfig();
-    private final ForecastPage page = new ForecastPage();
+    private final ForecastPage forecastPage = new ForecastPage();
     private Timing timing;
 
     @Test
     void given_city_is_provided_when_check_forecast_then_should_display_the_forecast() {
-        page.cityEdit.sendKeys(CITY_NAME);
-        page.checkButton.click();
-        timing.wait(visibilityOf(page.city), ofSeconds(4));
-        hasText(page.city, CITY_NAME);
+        forecastPage.enterCityName(CITY_NAME);
+        forecastPage.checkWeather();
+        timing.waitFor(visibilityOf(forecastPage.city), ofSeconds(3));
+        hasText(forecastPage.city, CITY_NAME);
     }
 
     @BeforeAll
@@ -40,7 +40,7 @@ class CheckForecastForCityTest {
     @BeforeEach
     void beforeEach() {
         config.initDriver();
-        PageFactory.initElements(config.getDriver(), page);
+        PageFactory.initElements(config.getDriver(), forecastPage);
         timing = new Timing(config.getDriver());
     }
 

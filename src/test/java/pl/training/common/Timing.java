@@ -15,7 +15,7 @@ public class Timing {
         this.driver = driver;
     }
 
-    public <V> V wait(Function<? super WebDriver, V> isTrue, Duration maxTime) {
+    public <V> V waitFor(Function<? super WebDriver, V> isTrue, Duration maxTime) {
         return new WebDriverWait(driver, maxTime).until(isTrue);
     }
 
