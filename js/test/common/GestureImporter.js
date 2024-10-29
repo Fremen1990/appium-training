@@ -21,7 +21,6 @@ class GestureImporter {
                 actions: []
             };
             for (const tick of actions[index].ticks) {
-                console.log(tick);
                 switch (tick.type) {
                     case 'pointerMove':
                         pointer.actions.push({
