@@ -33,5 +33,5 @@ App inspector
 - Pobrać i zainstalować - https://github.com/appium/appium-inspector
 
 # Komendy
-pip install Appium-Python-Client
-py nazwa_skryptu.py
+Opakowanie projektu maven wrapperem
+mvn wrapper:wrapper 
