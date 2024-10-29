@@ -48,7 +48,7 @@ public class GesturesTest {
     }
 
     @Test
-    void scroll() {
+    void swipe() {
         driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Vertical swiping\")")).click();
 
         var element = driver.findElement(new ByAndroidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(2)"));
@@ -110,6 +110,7 @@ public class GesturesTest {
     void beforeEach() {
         config.initDriver();
         driver = config.getDriver();
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 
         var loginButton = driver.findElement(new ByAndroidUIAutomator("new UiSelector().className(\"android.widget.Button\")"));

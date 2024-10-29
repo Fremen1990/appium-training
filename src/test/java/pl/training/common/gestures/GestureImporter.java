@@ -37,6 +37,7 @@ public class GestureImporter {
 
         var result = new ArrayList<Sequence>();
         var actions = gesture.getActions();
+
         for (int index = 0; index < actions.size(); index++) {
             var pointer = new PointerInput(TOUCH, "pointer" + index);
             var sequence = new Sequence(pointer, 1);
@@ -47,9 +48,6 @@ public class GestureImporter {
                         sequence.addAction(pointer.createPointerMove(ofMillis(tick.getDuration()), Origin.viewport(),
                                 (tick.getX().intValue() * windowSize.width) / 100,
                                 (tick.getY().intValue() * windowSize.height) / 100));
-                        if (tick.getDuration() == 0) {
-                            sequence.addAction(new Pause(pointer, ofMillis(1_000)));
-                        }
                         break;
                     case "pointerDown":
                         sequence.addAction(pointer.createPointerDown(LEFT.asArg()));
