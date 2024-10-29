@@ -1,6 +1,6 @@
 {
-  "name": "ScrollUp",
-  "description": "Add Description",
+  "name": "SwipeUp",
+  "description": "",
   "actions": [
     {
       "name": "pointer1",
@@ -8,8 +8,8 @@
         {
           "id": "1.1",
           "type": "pointerMove",
-          "x": 46.4,
-          "y": 89.5,
+          "x": 51.6,
+          "y": 90.1,
           "duration": 0
         },
         {
@@ -20,9 +20,9 @@
         {
           "id": "1.3",
           "type": "pointerMove",
-          "x": 50.7,
-          "y": 25.6,
-          "duration": 300
+          "x": 49.8,
+          "y": 28.3,
+          "duration": 1000
         },
         {
           "id": "1.4",
@@ -34,6 +34,6 @@
       "id": "1"
     }
   ],
-  "id": "edbb30f9-d88b-4f62-9a90-c544bd9141e4",
-  "date": 1730201915726
+  "id": "e71a0f58-9ef0-4fff-8566-ea7505f691b8",
+  "date": 1730203454942
 }

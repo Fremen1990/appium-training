@@ -2,21 +2,24 @@ package pl.training;
 
 import io.appium.java_client.AppiumBy.ByAccessibilityId;
 import io.appium.java_client.AppiumBy.ByAndroidUIAutomator;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.training.common.AndroidTestConfig;
+import pl.training.common.gestures.GestureImporter;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Map;
 
 // https://github.com/appium/appium-uiautomator2-driver/blob/master/docs/android-mobile-gestures.md
 // https://monfared.medium.com/gestures-in-appium-part9-plugin-9f83b954a400
+// https://github.com/AppiumTestDistribution/appium-gestures-plugin
 public class GesturesTest {
 
     private final AndroidTestConfig config = new AndroidTestConfig();
-    private AppiumDriver driver;
+    private AndroidDriver driver;
 
     @Test
     void doubleTap() {
@@ -78,6 +81,14 @@ public class GesturesTest {
         );
 
         driver.executeScript("mobile: dragGesture", params);
+    }
+
+    @Test
+    void custom() throws IOException {
+        driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Vertical swiping\")")).click();
+        var importer = new GestureImporter(driver);
+        var gesture = importer.importGestures("gesture-SwipeUp.json");
+        driver.perform(gesture);
     }
 
     /*
