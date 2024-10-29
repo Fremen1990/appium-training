@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const { ActionSequence, Origin, WebDriver } = require('webdriverio');
 
 class GestureImporter {
+
     constructor(driver) {
         this.driver = driver;
     }
