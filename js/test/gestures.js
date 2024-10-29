@@ -1,6 +1,4 @@
-const assert = require('assert');
 const AndroidTestConfig = require('./common/AndroidTestConfig');
-const ForecastPage = require('./ForecastPage');
 const GestureImporter = require('./common/GestureImporter');
 
 describe('Gestures', function () {
@@ -34,7 +32,6 @@ describe('Gestures', function () {
             percent: 1.0
         };
         await driver.execute('mobile: swipeGesture', params);
-
         */
 
         const importer = new GestureImporter(driver);
