@@ -15,19 +15,19 @@ public class IOSTestConfig {
     private static final String AUTOMATION_NAME = "xcuitest";
 
     private IOSDriver driver;
-    private static final AppiumDriverLocalService appiumService = AppiumDriverLocalService.buildDefaultService();
+    /*private static final AppiumDriverLocalService appiumService = AppiumDriverLocalService.buildDefaultService();
 
     public static void startServer() {
         if (!appiumService.isRunning()) {
-            appiumService.start();
+            //appiumService.start();
         }
     }
 
     public static void stopServer() {
         if (appiumService.isRunning()) {
-            appiumService.stop();
+            //appiumService.stop();
         }
-    }
+    }*/
 
     public void initDriver() {
         try {

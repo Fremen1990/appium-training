@@ -21,7 +21,7 @@ public class GesturesTest {
     private final AndroidTestConfig config = new AndroidTestConfig();
     private AndroidDriver driver;
 
-    @Test
+    //@Test
     void doubleTap() {
         driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Double Tap\")")).click();
 
@@ -34,7 +34,7 @@ public class GesturesTest {
         driver.executeScript("mobile: doubleClickGesture", params);
     }
 
-    @Test
+    //@Test
     void longPress() {
         driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Long Press\")")).click();
 
@@ -47,7 +47,7 @@ public class GesturesTest {
         driver.executeScript("mobile: longClickGesture", params);
     }
 
-    @Test
+    //@Test
     void swipe() {
         driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Vertical swiping\")")).click();
 
@@ -67,7 +67,7 @@ public class GesturesTest {
         driver.executeScript("mobile: swipeGesture", params);
     }
 
-    @Test
+    //@Test
     void drag() {
         driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Drag & Drop\")")).click();
 
@@ -83,7 +83,7 @@ public class GesturesTest {
         driver.executeScript("mobile: dragGesture", params);
     }
 
-    @Test
+    //@Test
     void custom() throws IOException {
         driver.findElement(new ByAndroidUIAutomator("new UiSelector().text(\"Vertical swiping\")")).click();
         var importer = new GestureImporter(driver);

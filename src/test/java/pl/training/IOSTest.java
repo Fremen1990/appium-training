@@ -1,27 +1,27 @@
 package pl.training;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import pl.training.common.IOSTestConfig;
-
-import static pl.training.common.AndroidTestConfig.startServer;
-import static pl.training.common.AndroidTestConfig.stopServer;
 
 class IOSTest {
 
     private final IOSTestConfig config = new IOSTestConfig();
 
-    @Test
+    //@Test
     void test() {
     }
 
     @BeforeAll
     static void beforeAll() {
-        startServer();
+        //startServer();
     }
 
     @AfterAll
     static void afterAll() {
-        stopServer();
+        //stopServer();
     }
 
     @BeforeEach

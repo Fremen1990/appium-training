@@ -1,14 +1,14 @@
 package pl.training;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.support.PageFactory;
 import pl.training.common.AndroidTestConfig;
 import pl.training.common.Timing;
 
 import static java.time.Duration.ofSeconds;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
-import static pl.training.common.AndroidTestConfig.startServer;
-import static pl.training.common.AndroidTestConfig.stopServer;
 import static pl.training.common.UIAssertions.hasText;
 
 class CheckForecastForCityTest {
@@ -27,7 +27,7 @@ class CheckForecastForCityTest {
         hasText(forecastPage.city, CITY_NAME);
     }
 
-    @BeforeAll
+    /*@BeforeAll
     static void beforeAll() {
         startServer();
     }
@@ -35,7 +35,7 @@ class CheckForecastForCityTest {
     @AfterAll
     static void afterAll() {
         stopServer();
-    }
+    }*/
 
     @BeforeEach
     void beforeEach() {

@@ -1,0 +1,8 @@
+services:
+  java-tests:
+    image: node-tests
+    environment:
+      - APPIUM_UDID=emulator-5554
+      - APPIUM_PLATFORM_VERSION=15
+      - APPIUM_APP=/Users/pawel/Desktop/appium-training/apk/runkeeper.apk
+

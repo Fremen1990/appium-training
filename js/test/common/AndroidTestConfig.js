@@ -31,8 +31,6 @@ class AndroidTestConfig {
         }
     }
 
-
-
     static stopServer() {
         try {
             execSync('pkill -f appium');
