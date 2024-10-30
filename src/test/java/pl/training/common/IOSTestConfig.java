@@ -52,9 +52,9 @@ public class IOSTestConfig {
         return new XCUITestOptions()
                 .setPlatformName(PLATFORM_NAME)
                 .setAutomationName(AUTOMATION_NAME)
-                .setUdid("36F88727-4CCD-4414-AEE4-19EBFA1D7C38")
-                .setPlatformVersion("18.1")
-                .setApp("/Users/pawel/Desktop/appium-training/apk/TestProject.app")
+                .setUdid(System.getenv("APPIUM_UDID"))
+                .setPlatformVersion(System.getenv("APPIUM_PLATFORM_VERSION"))
+                .setApp(System.getenv("APPIUM_APP"))
                 .setFullReset(true);
     }
 

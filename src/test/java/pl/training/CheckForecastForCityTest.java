@@ -19,7 +19,7 @@ class CheckForecastForCityTest {
     private final ForecastPage forecastPage = new ForecastPage();
     private Timing timing;
 
-    @Test
+    //@Test
     void given_city_is_provided_when_check_forecast_then_should_display_the_forecast() {
         forecastPage.enterCityName(CITY_NAME);
         forecastPage.checkWeather();

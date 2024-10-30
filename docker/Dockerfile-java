@@ -19,6 +19,4 @@ WORKDIR ${DIR}
 
 RUN ./mvnw compile test-compile
 
-ENV APPIUM_URL=http://host.docker.internal:4723
-
 ENTRYPOINT ["./mvnw", "test"]
