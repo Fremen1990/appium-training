@@ -1,0 +1,22 @@
+FROM eclipse-temurin:21-jdk-alpine
+
+ARG USERNAME=appium
+ARG DIR=/home/${USERNAME}/tests
+
+RUN adduser --gecos ${USERNAME} --disabled-password --shell /bin/sh --uid 1014 ${USERNAME} \
+    && addgroup ${USERNAME} ${USERNAME}
+
+USER ${USERNAME}
+
+RUN mkdir ${DIR}
+
+COPY .mvn /${DIR}/.mvn
+COPY mvnw /${DIR}
+COPY src /${DIR}/src
+COPY pom.xml /${DIR}
+
+WORKDIR ${DIR}
+
+RUN ./mvnw compile test-compile
+
+ENTRYPOINT ["./mvnw", "test"]

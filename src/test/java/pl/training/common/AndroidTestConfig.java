@@ -15,19 +15,19 @@ public class AndroidTestConfig {
     private static final String AUTOMATION_NAME = "uiAutomator2";
 
     private AndroidDriver driver;
-    private static final AppiumDriverLocalService appiumService = AppiumDriverLocalService.buildDefaultService();
+    /*private static final AppiumDriverLocalService appiumService = AppiumDriverLocalService.buildDefaultService();
 
     public static void startServer() {
         if (!appiumService.isRunning()) {
-            appiumService.start();
+            //appiumService.start();
         }
     }
 
     public static void stopServer() {
         if (appiumService.isRunning()) {
-            appiumService.stop();
+            //appiumService.stop();
         }
-    }
+    }*/
 
     public void initDriver() {
         try {
@@ -52,7 +52,7 @@ public class AndroidTestConfig {
         return new UiAutomator2Options()
                 .setPlatformName(PLATFORM_NAME)
                 .setAutomationName(AUTOMATION_NAME)
-                .setDeviceName(System.getenv("APPIUM_DEVICE_NAME"))
+                //.setDeviceName(System.getenv("APPIUM_DEVICE_NAME"))
                 .setUdid(System.getenv("APPIUM_UDID"))
                 .setPlatformVersion(System.getenv("APPIUM_PLATFORM_VERSION"))
                 .setApp(System.getenv("APPIUM_APP"))
