@@ -52,20 +52,20 @@ Dodatkowo dla iOS
 Opakowanie projektu maven wrapperem
 mvn wrapper:wrapper 
 
-# Pobieranie informacji o urządzeniach
+Pobieranie informacji o urządzeniach
 - adb devices
 
 - xcrun simctl list
 - xcrun xctrace list devices
 
-# Uruchamianie symulatorów/emulatorów
+Uruchamianie symulatorów/emulatorów
 - avdmanager list avd
 - emulator -avd <emulator-name>
 
 - xcrun simctl list
 - xcrun simctl boot <udid>
 
-# Budowanie projekty pod Appium z xcode
+Budowanie projekty pod Appium z xcode
 - Ustawiamy platformę (Product -> Destination -> Phone x)
 - Budujemy projekt (Product -> Build) 
 - Otwieramy ~/Library/Developer/Xcode/DerivedData/<nazwa-projektu-random_id>/Build/Products/Debug-iphonesimulator/<nazwa-projektu>.app
