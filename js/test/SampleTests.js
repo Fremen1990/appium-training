@@ -2,7 +2,7 @@ const assert = require('assert');
 const AndroidTestConfig = require('./common/AndroidTestConfig');
 const SamplePage = require('./SamplePage');
 
-describe.only('Sample', function () {
+describe.skip('Sample', function () {
 
     this.timeout(180 * 1000);
 

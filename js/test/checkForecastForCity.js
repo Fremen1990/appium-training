@@ -2,9 +2,9 @@ const assert = require('assert');
 const AndroidTestConfig = require('./common/AndroidTestConfig');
 const ForecastPage = require('./ForecastPage');
 
-describe('Forecast', function () {
+describe.only('Forecast', function () {
 
-    // this.timeout(60 * 1000);
+    this.timeout(120 * 1000);
 
     let testConfig;
     let forecastPage;

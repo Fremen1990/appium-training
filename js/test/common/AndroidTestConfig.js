@@ -69,8 +69,15 @@ class AndroidTestConfig {
 
     getOptions() {
         return {
-            "appium:appPackage": "com.swaglabsmobileapp",
-            "appium:appActivity": "com.swaglabsmobileapp.SplashActivity",
+            // "appium:appPackage": "com.swaglabsmobileapp",
+            // "appium:appActivity": "com.swaglabsmobileapp.SplashActivity",
+
+            // "appium:appPackage": "pl.training.runkeeper",
+            // "appium:appActivity": "pl.training.runkeeper.RunkeeperMainActivity",
+
+            "appium:appPackage": process.env.APPIUM_APP_PACKAGE,
+            "appium:appActivity": process.env.APPIUM_APP_ACTIVITY,
+
             "platformName": PLATFORM_NAME,
             "appium:automationName": AUTOMATION_NAME,
             "appium:deviceName": process.env.APPIUM_DEVICE_NAME,
