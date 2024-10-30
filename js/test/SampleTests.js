@@ -1,5 +1,5 @@
 const assert = require('assert');
-const AndroidTestConfig = require('./AndroidTestConfig');
+const AndroidTestConfig = require('./common/AndroidTestConfig');
 const SamplePage = require('./SamplePage');
 
 describe.only('Sample', function () {

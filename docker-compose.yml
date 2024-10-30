@@ -5,12 +5,12 @@ services:
       - APPIUM_URL=http://host.docker.internal:4723
       - APPIUM_UDID=emulator-5554
       - APPIUM_PLATFORM_VERSION=15
-      - APPIUM_APP=/Users/pawel/Desktop/appium-training/apk/runkeeper.apk
-  ios:
-    image: java-tests
-    environment:
-      - APPIUM_URL=http://host.docker.internal:4723
-      - APPIUM_UDID=36F88727-4CCD-4414-AEE4-19EBFA1D7C38
-      - APPIUM_PLATFORM_VERSION=18.1
-      - APPIUM_APP=/Users/pawel/Desktop/appium-training/apk/BestWather.app
+      - APPIUM_APP=D:\\dev\\appium-szkolenie\\apk\\sample.apk
+#  ios:
+#    image: java-tests
+#    environment:
+#      - APPIUM_URL=http://host.docker.internal:4723
+#      - APPIUM_UDID=36F88727-4CCD-4414-AEE4-19EBFA1D7C38
+#      - APPIUM_PLATFORM_VERSION=18.1
+#      - APPIUM_APP=D:\dev\appium-szkolenie\apk\BestWather.app
 
