@@ -65,7 +65,7 @@ mvn wrapper:wrapper
 - xcrun simctl list
 - xcrun simctl boot <udid>
 
-# Budowanie projekty pod Appium z XCode
+# Budowanie projekty pod Appium z xcode
 - Ustawiamy platformę (Product -> Destination -> Phone x)
 - Budujemy projekt (Product -> Build) 
 - Otwieramy ~/Library/Developer/Xcode/DerivedData/<nazwa-projektu-random_id>/Build/Products/Debug-iphonesimulator/<nazwa-projektu>.app
